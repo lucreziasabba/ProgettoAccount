@@ -80,6 +80,6 @@
             <StackPanel Height="250" Width="250">
                 <Image Source="C:\Users\lucreziasabba\source\repos\ProgettoAccount\Acquisti_\bin\LOGO.png"/>
             </StackPanel>
-        </Grid>
+        </Grid> 
     </Grid>
 </Window>
