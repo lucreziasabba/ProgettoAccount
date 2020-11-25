@@ -1,0 +1,85 @@
+﻿<Window x:Class="Acquisti_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Acquisti_"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="570" Width="800">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" Background="#080467">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.7*"/>
+                <RowDefinition Height="7*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Label Content="Definisci Acquisto" FontFamily="Arial Black" Foreground="#ffffffff" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18"></Label>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Label Content="Prodotto:" Foreground="#ffffffff" FontFamily="Arial Narrow" HorizontalContentAlignment="Center" FontSize="24" Margin="5,30,40,0"></Label>
+                    <Label Content="Quantità:" Foreground="#ffffffff" FontFamily="Arial Narrow" HorizontalContentAlignment="Center" FontSize="24" Margin="5,65,40,0"></Label>
+                    <Label Content="Prezzo:" Foreground="#ffffffff" FontFamily="Arial Narrow" HorizontalContentAlignment="Center" FontSize="24" Margin="5,100,40,0"></Label>
+                    <Button x:Name="btnPulisci" Content="Pulisci" FontSize="15" FontFamily="Arial Narrow" Width="110" Height="28" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5,0,0,20"></Button>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <ComboBox Name="cmbProdotto" HorizontalAlignment="Left"  Margin="10,35,0,125" Width="110"/>
+                    <TextBox x:Name="txtProdotto" FontFamily="Arial Narrow" FontSize="16" Width="110" Height="28" HorizontalAlignment="Left"  Margin="10,70,0,92"></TextBox>
+                    <TextBox x:Name="txtPrezzo" FontFamily="Arial Narrow" FontSize="16" Width="110" Height="28" HorizontalAlignment="Left"  Margin="10,105,0,58"></TextBox>
+                    <Button x:Name="btnStampa" Content="Stampa" FontSize="15" FontFamily="Arial Narrow" Width="110" Height="28" HorizontalAlignment="Left" Margin="10,144,0,20"></Button>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.Row="0" Background="#0E07B1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="6*"/>
+                </Grid.RowDefinitions>
+                <Label Content="Inserisci le credenziali" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial Black" FontSize="10" Width="130" Foreground="#ffffffff"></Label>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Label HorizontalAlignment="Right" Margin="0,40,20,147" Foreground="#ffffffff" Content="Utente :" FontFamily="Arial Black" FontSize="20"></Label>
+                        <Label HorizontalAlignment="Right" Margin="0,96,20,91" Foreground="#ffffffff" Content="Password :" FontFamily="Arial Black" FontSize="20"></Label>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <TextBox x:Name="txtUtente" Text="" HorizontalAlignment="Center" Width="170" Height="35" Margin="0,40,0,147" FontFamily="Arial Black" FontSize="16"></TextBox>
+                        <TextBox x:Name="txtPassword" Text="" HorizontalAlignment="Center" Width="170" Height="35" Margin="0,96,0,91" FontFamily="Arial Black" FontSize="16"></TextBox>
+                        <Button x:Name="btnAccedi" Content="Accedi" Width="100" Height="40" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" FontFamily="Arial Black"></Button>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="1" Background="#080467">
+            <TextBox x:Name="txtSelezione" FontFamily="Arial Narrow" Width="460" FontSize="15" Height="140" VerticalAlignment="Top" Margin="0,30,0,0"></TextBox>
+            <Button x:Name="btnRimuoviSelezione" Content="Rimuovi selezione" FontFamily="Arial Narrow" FontSize="12" Width="110" Height="22" VerticalAlignment="Bottom" Margin="0,0,0,38"></Button>
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="0">
+            <StackPanel Height="250" Width="250">
+                <Image Source="C:\Users\lucreziasabba\source\repos\ProgettoAccount\Acquisti_\bin\LOGO.png"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
