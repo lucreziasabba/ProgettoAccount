@@ -13,7 +13,7 @@
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
 
-        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="5*"/>
             <RowDefinition Height="4*"/>
@@ -36,13 +36,13 @@
                     <Label Content="Prodotto:" Foreground="#ffffffff" FontFamily="Arial Narrow" HorizontalContentAlignment="Center" FontSize="24" Margin="5,30,40,0"></Label>
                     <Label Content="Quantità:" Foreground="#ffffffff" FontFamily="Arial Narrow" HorizontalContentAlignment="Center" FontSize="24" Margin="5,65,40,0"></Label>
                     <Label Content="Prezzo:" Foreground="#ffffffff" FontFamily="Arial Narrow" HorizontalContentAlignment="Center" FontSize="24" Margin="5,100,40,0"></Label>
-                    <Button x:Name="btnPulisci" Content="Pulisci" FontSize="15" FontFamily="Arial Narrow" Width="110" Height="28" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5,0,0,20"></Button>
+                    <Button x:Name="btnPulisci" Content="Pulisci" FontSize="15" FontFamily="Arial Narrow" Width="110" Height="28" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5,0,0,20" Click="BtnPulisci_Click"></Button>
                 </Grid>
                 <Grid Grid.Column="1">
                     <ComboBox Name="cmbProdotto" HorizontalAlignment="Left"  Margin="10,35,0,125" Width="110"/>
-                    <TextBox x:Name="txtProdotto" FontFamily="Arial Narrow" FontSize="16" Width="110" Height="28" HorizontalAlignment="Left"  Margin="10,70,0,92"></TextBox>
+                    <TextBox x:Name="txtQuantita" FontFamily="Arial Narrow" FontSize="16" Width="110" Height="28" HorizontalAlignment="Left"  Margin="10,70,0,92"></TextBox>
                     <TextBox x:Name="txtPrezzo" FontFamily="Arial Narrow" FontSize="16" Width="110" Height="28" HorizontalAlignment="Left"  Margin="10,105,0,58"></TextBox>
-                    <Button x:Name="btnStampa" Content="Stampa" FontSize="15" FontFamily="Arial Narrow" Width="110" Height="28" HorizontalAlignment="Left" Margin="10,144,0,20"></Button>
+                    <Button x:Name="btnStampa" Content="Stampa" FontSize="15" FontFamily="Arial Narrow" Width="110" Height="28" HorizontalAlignment="Left" Margin="10,144,0,20" Click="BtnStampa_Click"></Button>
                 </Grid>
             </Grid>
         </Grid>
@@ -66,20 +66,20 @@
                     <Grid Grid.Column="1">
                         <TextBox x:Name="txtUtente" Text="" HorizontalAlignment="Center" Width="170" Height="35" Margin="0,40,0,147" FontFamily="Arial Black" FontSize="16"></TextBox>
                         <TextBox x:Name="txtPassword" Text="" HorizontalAlignment="Center" Width="170" Height="35" Margin="0,96,0,91" FontFamily="Arial Black" FontSize="16"></TextBox>
-                        <Button x:Name="btnAccedi" Content="Accedi" Width="100" Height="40" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" FontFamily="Arial Black"></Button>
+                        <Button x:Name="btnAccedi" Content="Accedi" Width="100" Height="40" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" FontFamily="Arial Black" Click="BtnAccedi_Click"></Button>
                     </Grid>
                 </Grid>
             </Grid>
         </Grid>
 
         <Grid Grid.Row="1" Grid.Column="1" Background="#080467">
-            <TextBox x:Name="txtSelezione" FontFamily="Arial Narrow" Width="460" FontSize="15" Height="140" VerticalAlignment="Top" Margin="0,30,0,0"></TextBox>
-            <Button x:Name="btnRimuoviSelezione" Content="Rimuovi selezione" FontFamily="Arial Narrow" FontSize="12" Width="110" Height="22" VerticalAlignment="Bottom" Margin="0,0,0,38"></Button>
+            <Button x:Name="btnRimuoviSelezione" Content="Rimuovi selezione" FontFamily="Arial Narrow" FontSize="12" Width="110" Height="22" VerticalAlignment="Bottom" Margin="0,0,0,38" Click="BtnRimuoviSelezione_Click"></Button>
+            <ListBox x:Name="lstSelezione" FontFamily="Arial Narrow" Width="460" FontSize="15" Height="140" VerticalAlignment="Top" Margin="0,30,0,0"></ListBox>
         </Grid>
         <Grid Grid.Row="0" Grid.Column="0">
             <StackPanel Height="250" Width="250">
                 <Image Source="C:\Users\lucreziasabba\source\repos\ProgettoAccount\Acquisti_\bin\LOGO.png"/>
             </StackPanel>
-        </Grid> 
+        </Grid>
     </Grid>
 </Window>
